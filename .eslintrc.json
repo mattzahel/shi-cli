@@ -1,0 +1,19 @@
+{
+    "env": {
+        "es2020": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "airbnb-base"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "rules": {
+        "semi": [2, "never"],
+        "quotes": [2, "single"],
+        "no-console": "warn"
+    }
+}
