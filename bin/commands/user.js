@@ -1,5 +1,5 @@
 const os = require('os')
-const chalk = require('chalk')
+const logData = require('../utilities/logData')
 
 const userData = {
   'Username': os.userInfo().username,
@@ -10,9 +10,7 @@ const userData = {
 }
 
 const user = () => {
-  Object.entries(userData).forEach((el) => {
-    console.info(chalk`{blue ${(el[0].padEnd(15))}} ${el[1]}`)
-  })
+  logData(userData)
 }
 
 module.exports = {
