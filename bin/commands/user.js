@@ -1,5 +1,5 @@
 const os = require('os')
-const table = require('text-table')
+const chalk = require('chalk')
 
 const userData = {
   'Username': os.userInfo().username,
@@ -10,11 +10,9 @@ const userData = {
 }
 
 const user = () => {
-  console.log(Object.entries(userData)) // array of arrays
-  const t = table(
-    Object.entries(userData),
-  )
-  console.info(t)
+  Object.entries(userData).forEach((el) => {
+    console.info(chalk`{blue ${(el[0].padEnd(15))}} ${el[1]}`)
+  })
 }
 
 module.exports = {
