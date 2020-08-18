@@ -1,9 +1,21 @@
-// const table = require('text-table')
+const os = require('os')
+const logData = require('../utilities/logData')
+const formatTime = require('../utilities/formatTime')
 
-const { user } = require('./user')
+const systemData = {
+  'Hostname': os.hostname(),
+  'Uptime': formatTime(os.uptime()),
+  'Platform': os.platform(),
+  'Release': os.release(),
+  'Type': os.type(),
+  'Architecture': os.arch(),
+}
 
-console.log('------------------------------')
+const system = () => {
+  logData(systemData)
+}
 
-module.exports = () => {
-  user()
+module.exports = {
+  system,
+  systemData,
 }
