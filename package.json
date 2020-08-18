@@ -6,15 +6,20 @@
   "license": "MIT",
   "preferGlobal": true,
   "bin": {
-    "sahi": "./bin/index.js"
+    "shi": "./bin/index.js"
+  },
+  "scripts": {
+    "dev": "nodemon ./bin/index.js a -q"
   },
   "dependencies": {
     "chalk": "^4.1.0",
-    "commander": "^6.0.0"
+    "commander": "^6.0.0",
+    "text-table": "^0.2.0"
   },
   "devDependencies": {
     "eslint": "^7.7.0",
     "eslint-config-airbnb-base": "^14.2.0",
-    "eslint-plugin-import": "^2.22.0"
+    "eslint-plugin-import": "^2.22.0",
+    "nodemon": "^2.0.4"
   }
 }
